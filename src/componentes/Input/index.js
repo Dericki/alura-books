@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Input = input`
+const Input = styled.input`
         border: 1px solid #FFF;
         background: transparent;
         border: 1px solid #FFF;
