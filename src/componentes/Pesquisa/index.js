@@ -24,15 +24,21 @@ const Subtitulo = styled.h3`
 `
 function Pesquisa () {
     const [livrosPesquisado, setlivrosPesquisado] = useState([])
+
+    console.log(livrosPesquisado)
+
     return (
         <PesquisaContainer>
         <Titulo>Já sabe por onde começar?</Titulo>
         <Subtitulo>Encontre seu livro em nossa estante.</Subtitulo>
         <Input 
             placeholder="Escreva sua próxima leitura"
-            onBlur={evento => setTextoDigitado(evento.target.value)}
+            onBlur={evento => {
+                const textoDigitado = evento.target.value
+                const resultadoPesquisa = livros.filter(livros.nome.includes(textoDigitado))
+                setlivrosPesquisado(resultadoPesquisa)
+            }}
         />
-        <p>{textoDigitado}</p>
         </PesquisaContainer>
     )
 }
