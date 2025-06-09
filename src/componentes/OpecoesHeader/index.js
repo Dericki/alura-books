@@ -20,13 +20,11 @@ const OpcoeContainer = styled.li`
 
 function OpcoesHeader() {
     return (
-      <BrowserRouter>
         <OpcoesContainer>
           { textoOpcoes.map( (texto) => (
            <Link to={`/${texto.toLowerCase()}`}><OpcoeContainer><p>{texto}</p></OpcoeContainer></Link> 
           ) ) }
         </OpcoesContainer>
-      </BrowserRouter>
     )
 }
 
