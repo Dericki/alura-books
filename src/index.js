@@ -5,6 +5,9 @@ import { createGlobalStyle } from 'styled-components';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Header from './componentes/Header';
 import Home from './Rotas/Home';
+import Favoritos from './Rotas/Favoritos';
+
+
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -33,7 +36,7 @@ root.render(
         <BrowserRouter>
             <Header />
             <Routes>
-                <Route path='/favoritos' element={<p>oi!</p>} />
+                <Route path='/favoritos' element={<Favoritos />} />
                 <Route path='/' element={<Home />} />
             </Routes>
         </BrowserRouter>
