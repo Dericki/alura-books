@@ -8,3 +8,6 @@ function getLivros(){
     return response.data
 }
 
+export {
+    getLivros
+}
